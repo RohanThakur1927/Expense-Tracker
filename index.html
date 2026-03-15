@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smart Expense Tracker</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="top-bar">
+
+<h1>💰 Smart Expense Tracker</h1>
+
+<button id="dark-toggle" class="toggle-btn">🌙 Toggle Dark Mode</button>
+
+</div>
+
+
+<div class="controls">
+
+<button id="save-btn">💾 Save Data</button>
+<button id="reset-btn">🔄 Reset Data</button>
+
+</div>
+
+
+<div class="dashboard">
+
+<div class="card">
+<h3>Balance</h3>
+<p id="balance">₹0</p>
+</div>
+
+<div class="card income">
+<h3>Income</h3>
+<p id="money-plus">₹0</p>
+</div>
+
+<div class="card expense">
+<h3>Expenses</h3>
+<p id="money-minus">₹0</p>
+</div>
+
+<div class="card savings">
+<h3>Savings</h3>
+<p id="savings">₹0</p>
+</div>
+
+</div>
+
+
+<div class="sections">
+
+<div class="box">
+
+<h2>Add Budget</h2>
+
+<form id="budget-form">
+
+<input type="text" id="budget-text" placeholder="Income source (Salary etc)" required>
+
+<input type="number" id="budget-amount" placeholder="Amount" required>
+
+<button type="submit">Add Budget</button>
+
+</form>
+
+</div>
+
+
+<div class="box">
+
+<h2>Add Expense</h2>
+
+<form id="expense-form">
+
+<input type="text" id="expense-text" placeholder="Expense name" required>
+
+<input type="number" id="expense-amount" placeholder="Amount" required>
+
+<select id="category">
+
+<option>Food</option>
+<option>Travel</option>
+<option>Bills</option>
+<option>Shopping</option>
+<option>Entertainment</option>
+<option>Health</option>
+<option>Education</option>
+
+</select>
+
+<button type="submit">Add Expense</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<div class="bottom-grid">
+
+<div class="history box">
+
+<h2>Transactions</h2>
+
+<ul id="list"></ul>
+
+</div>
+
+
+<div class="category-totals box">
+
+<h2>Category Totals</h2>
+
+<ul id="category-list"></ul>
+
+</div>
+
+</div>
+
+
+<div class="chart-box box">
+
+<h2>Expense Chart</h2>
+
+<canvas id="expenseChart"></canvas>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
